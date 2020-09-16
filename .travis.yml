@@ -1,7 +1,11 @@
 language: java
+sudo: false
+install: true
 script:
  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jdk:
   - oraclejdk8
 before_install:
   - chmod +x mvnw
+notifications:
+  email: false
